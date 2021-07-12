@@ -41,7 +41,6 @@ rest1.totalSales();
   console.log(rest1);
 
   let parent= document.getElementById('Branch Sales For Today');
-  console.log(parent);
   let BranchElement=document.createElement('branch');
   parent.appendChild(BranchElement);
 
@@ -58,3 +57,4 @@ BranchElement.textContent=rest1.location;
 ulelement.textContent=rest1.workhours;
 ulelement.textContent=rest1.realsales;
 
+console.log(parent);
