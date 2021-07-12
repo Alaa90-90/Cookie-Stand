@@ -39,3 +39,22 @@ rest1.real0sales();
 rest1.totalSales();
 
   console.log(rest1);
+
+  let parent= document.getElementById('Branch Sales For Today');
+  console.log(parent);
+  let BranchElement=document.createElement('branch');
+  parent.appendChild(BranchElement);
+
+  let ulelement=document.createElement('sale');
+  parent.appendChild(ulelement);
+
+let workhoursElement=document.createElement('work');
+ulelement.appendChild(workhoursElement);
+
+let salesElemnt=document.createComment('todaysales');
+ulelement.appendChild(salesElemnt);
+
+BranchElement.textContent=rest1.location;
+ulelement.textContent=rest1.workhours;
+ulelement.textContent=rest1.realsales;
+
