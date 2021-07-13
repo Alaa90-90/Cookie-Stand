@@ -1,143 +1,309 @@
 `use strict`
 
 
-workhours= [`6 am`, `7 am`, `8 am`, `9 am`, `10 am`, `11 am`, `12 am`, `01 pm`, `02 pm`, `03 pm`, `04 pm`, `05 pm`, `06 pm`, `07 pm`,`Total sales this day`];
 
-let rest1 = {
-    location1: 'seattle',
-    maxcus1: 65,
-    minicus1: 23,
-    avgpercus1: 6.3,
-    realcus1: [],
-    realsales1: [],
+// let rest1 = {
+//     location1: 'seattle',
+//     maxcus1: 65,
+//     minicus1: 23,
+//     avgpercus1: 6.3,
+//     realcus1: [],
+//     realsales1: [],
 
-    real0cus1: function () {
+//     real0cus1: function () {
 
-        for (let i = 0; i < 14; i++) {
+//         for (let i = 0; i < 14; i++) {
 
-            this.realcus1[i]=(Math.floor(Math.random() * (this.maxcus1 - this.minicus1 + 1)) + this.minicus1
-            );
-        }
-    },
+//             this.realcus1[i]=(Math.floor(Math.random() * (this.maxcus1 - this.minicus1 + 1)) + this.minicus1
+//             );
+//         }
+//     },
 
-    real0sales1: function () {
+//     real0sales1: function () {
 
-        for (let i = 0; i < 14; i++) {
+//         for (let i = 0; i < 14; i++) {
 
-            this.realsales1[i]=Math.floor(this.realcus1[i]*this.avgpercus1)
-};
-    },
+//             this.realsales1[i]=Math.floor(this.realcus1[i]*this.avgpercus1)
+// };
+//     },
 
-    // this function sponcerd by w3school.com
-    
-totalSales1:function(){
+//     // this function sponcerd by w3school.com
 
-       this.realsales1.reduce((a, b) => a + b, 0)
-      
-       this.realsales1.push(this.realsales1.reduce((a, b) => a + b, 0));
+// totalSales1:function(){
+
+//        this.realsales1.reduce((a, b) => a + b, 0)
+
+//        this.realsales1.push(this.realsales1.reduce((a, b) => a + b, 0));
+
+// }
+// };
+
+// rest1.real0cus1();
+// rest1.real0sales1();
+// rest1.totalSales1();
+
+//   console.log(rest1);
+
+//   let parent= document.getElementById('seattle Sales For Today');
+//   let BranchElement=document.createElement('h2');
+
+//   BranchElement.textContent=rest1.location1;
+
+//   parent.appendChild(BranchElement);
+
+
+
+//   let ulelement=document.createElement('ul');
+//   parent.appendChild(ulelement);
+
+//   for (let i = 0; i < workhours.length; i++) {
+
+//     let workhoursElement=document.createElement('li');
+//     workhoursElement.textContent=`${workhours[i]}: ${rest1.realsales1[i]}`;
+//     ulelement.appendChild(workhoursElement);
+
+//   }
+
+// console.log(parent);
+
+
+
+
+
+
+
+
+
+
+
+
+// let rest2 = {
+//     location2: 'tokyo',
+//     maxcus2: 24,
+//     minicus2: 3,
+//     avgpercus2: 1.2,
+//     realcus2: [],
+//     realsales2: [],
+
+//     real0cus2: function () {
+
+//         for (let i = 0; i < 14; i++) {
+
+//             this.realcus2[i]=(Math.floor(Math.random() * (this.maxcus2 - this.minicus2 + 1)) + this.minicus2
+//             );
+//         }
+//     },
+
+//     real0sales2: function () {
+
+//         for (let i = 0; i < 14; i++) {
+
+//             this.realsales2[i]=Math.floor(this.realcus2[i]*this.avgpercus2)
+// };
+//     },
+
+//     // this function sponcerd by w3school.com
+
+// total0Sales2:function(){
+
+//        this.realsales2.reduce((a, b) => a + b, 0)
+
+//        this.realsales2.push(this.realsales2.reduce((a, b) => a + b, 0));
+
+// }
+// };
+
+// rest2.real0cus2();
+// rest2.real0sales2();
+// rest2.total0Sales2();
+
+//   console.log(rest2);
+
+//   let parent2= document.getElementById('tokyo Sales For Today');
+//   let BranchElement2=document.createElement('h2');
+
+//   BranchElement2.textContent=rest2.location2;
+
+//   parent2.appendChild(BranchElement2);
+
+
+
+//   let ulelement2=document.createElement('ul');
+//   parent2.appendChild(ulelement2);
+
+//   for (let i = 0; i < workhours.length; i++) {
+
+//     let workhoursElement2=document.createElement('li');
+//     workhoursElement2.textContent=`${workhours[i]}: ${rest2.realsales2[i]}`;
+//     ulelement2.appendChild(workhoursElement2);
+
+//   }
+
+// console.log(parent2);
+
+
+
+let workhours = [`6 am`, `7 am`, `8 am`, `9 am`, `10 am`, `11 am`, `12 am`, `01 pm`, `02 pm`, `03 pm`, `04 pm`, `05 pm`, `06 pm`, `07 pm`, `daily location total`];
+
+let br = ['seattle', 'tokyo', 'dubai', 'paris', 'lima'];
+
+
+
+function Branches(location, maxcustom, minicustom, avrcustom) {
+
+    this.location = location;
+    this.maxcustom = maxcustom;
+    this.minicustom = minicustom;
+    this.avrcustom = avrcustom;
+    realcustom = [];
+    realsale = [];
+
+    realcustom.push(this);
+    realsale.push(this);
+}
+
+Branches.prototype.customers = function () {
+
+    for (let i = 0; i < 14; i++) {
+
+        this.customers[i] = (Math.floor(Math.random() * (this.maxcustom - this.minicustom + 1)) + this.minicustom
+        );
+
+        // this.customers.push(realcustom);
+
+    }
+
 
 }
-};
 
-rest1.real0cus1();
-rest1.real0sales1();
-rest1.totalSales1();
+Branches.prototype.sales = function () {
 
-  console.log(rest1);
+    for (let i = 0; i < 14; i++) {
 
-  let parent= document.getElementById('seattle Sales For Today');
-  let BranchElement=document.createElement('h2');
+        this.sales[i] = Math.floor(this.sales[i] * this.avrcustom);
+    }
 
-  BranchElement.textContent=rest1.location1;
-
-  parent.appendChild(BranchElement);
-
-
-
-  let ulelement=document.createElement('ul');
-  parent.appendChild(ulelement);
-
-  for (let i = 0; i < workhours.length; i++) {
-
-    let workhoursElement=document.createElement('li');
-    workhoursElement.textContent=`${workhours[i]}: ${rest1.realsales1[i]}`;
-    ulelement.appendChild(workhoursElement);
-
-  }
-
-console.log(parent);
-
-
-
-
-
-
-
-
-
-
-
-
-let rest2 = {
-    location2: 'tokyo',
-    maxcus2: 24,
-    minicus2: 3,
-    avgpercus2: 1.2,
-    realcus2: [],
-    realsales2: [],
-
-    real0cus2: function () {
-
-        for (let i = 0; i < 14; i++) {
-
-            this.realcus2[i]=(Math.floor(Math.random() * (this.maxcus2 - this.minicus2 + 1)) + this.minicus2
-            );
-        }
-    },
-
-    real0sales2: function () {
-
-        for (let i = 0; i < 14; i++) {
-
-            this.realsales2[i]=Math.floor(this.realcus2[i]*this.avgpercus2)
-};
-    },
-
-    // this function sponcerd by w3school.com
-    
-total0Sales2:function(){
-
-       this.realsales2.reduce((a, b) => a + b, 0)
-      
-       this.realsales2.push(this.realsales2.reduce((a, b) => a + b, 0));
+    // sales.push(this.realsale);
 
 }
-};
-
-rest2.real0cus2();
-rest2.real0sales2();
-rest2.total0Sales2();
-
-  console.log(rest2);
-
-  let parent2= document.getElementById('tokyo Sales For Today');
-  let BranchElement2=document.createElement('h2');
-
-  BranchElement2.textContent=rest2.location2;
-
-  parent2.appendChild(BranchElement2);
 
 
 
-  let ulelement2=document.createElement('ul');
-  parent2.appendChild(ulelement2);
+Branches.prototype.totalsales = function () {
 
-  for (let i = 0; i < workhours.length; i++) {
 
-    let workhoursElement2=document.createElement('li');
-    workhoursElement2.textContent=`${workhours[i]}: ${rest2.realsales2[i]}`;
-    ulelement2.appendChild(workhoursElement2);
 
-  }
 
-console.log(parent2);
+    // this.totalsales.reduce((a, b) => a + b, 0)
+
+    // this.totalsales.push(this.totalsales.reduce((a, b) => a + b, 0));
+
+
+
+}
+
+
+
+
+
+
+let seattle = new Branches('seattle', 65, 23, 6.3);
+seattle.customers()
+seattle.sales()
+seattle.totalsales()
+console.log(seattle);
+
+
+let tokyo = new Branches('tokyo', 24, 3, 1.2)
+tokyo.customers()
+tokyo.sales()
+tokyo.totalsales()
+console.log(tokyo);
+
+let dubai = new Branches('dubai', 38, 11, 3.7)
+dubai.customers()
+dubai.sales()
+dubai.totalsales()
+console.log(dubai);
+
+let paris = new Branches('paris', 38, 20, 2.3)
+paris.customers()
+paris.sales()
+paris.totalsales()
+console.log(paris);
+
+
+let lima = new Branches('lima', 16, 2, 4.6)
+lima.customers()
+lima.sales()
+lima.totalsales()
+console.log(lima);
+
+
+let parent9 = document.getElementById('table of sales');
+let table = document.createElement('table');
+parent9.appendChild(table);
+
+let headingraw = document.createElement('tr');
+table.appendChild(headingraw);
+
+
+for (let i = 0; i < workhours.length; i++) {
+    let thEL = document.createElement('th');
+    headingraw.appendChild(thEL);
+    thEL.textContent = workhours[i]
+
+}
+
+
+
+for (let i = 0; i < br.length; i++) {
+
+    let raws = document.createElement('tr');
+    table.appendChild(raws);
+raws.textContent =br[i]
+
+    for (let j = 0; j < workhours.length; j++) {
+        let otherraw = document.createElement('td');
+        raws.appendChild(otherraw);
+otherraw.textContent = realsale;
+    }
+    
+
+
+}
+
+let downheading =document.createElement('tr');
+table.appendChild(downheading);
+for (let i = 0; i < workhours.length; i++) {
+let downel=document.createElement('th');
+downheading.appendChild(downel);
+downel.textContent = workhours[i]
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
