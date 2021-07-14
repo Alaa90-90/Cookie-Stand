@@ -1,4 +1,10 @@
+
 `use strict`
+
+
+let workhours = [`6 am`, `7 am`, `8 am`, `9 am`, `10 am`, `11 am`, `12 am`, `01 pm`, `02 pm`, `03 pm`, `04 pm`, `05 pm`, `06 pm`, `07 pm`, `daily location total`];
+
+let br = ['seattle', 'tokyo', 'dubai', 'paris', 'lima'];
 
 
 
@@ -143,9 +149,13 @@
 
 
 
-let workhours = [`6 am`, `7 am`, `8 am`, `9 am`, `10 am`, `11 am`, `12 am`, `01 pm`, `02 pm`, `03 pm`, `04 pm`, `05 pm`, `06 pm`, `07 pm`, `daily location total`];
 
-let br = ['seattle', 'tokyo', 'dubai', 'paris', 'lima'];
+
+
+
+
+
+
 
 
 
@@ -155,62 +165,55 @@ function Branches(location, maxcustom, minicustom, avrcustom) {
     this.maxcustom = maxcustom;
     this.minicustom = minicustom;
     this.avrcustom = avrcustom;
-    realcustom = [];
-    realsale = [];
+    this.realcustom = [];
+    this.realsale = [];
 
-    realcustom.push(this);
-    realsale.push(this);
-}
 
-Branches.prototype.customers = function () {
+    Branches.prototype.customers = function () {
 
-    for (let i = 0; i < 14; i++) {
 
-        this.customers[i] = (Math.floor(Math.random() * (this.maxcustom - this.minicustom + 1)) + this.minicustom
-        );
 
-        // this.customers.push(realcustom);
+        for (let i = 0; i < workhours.length; i++) {
 
+            this.realcustom[i] = (Math.floor(Math.random() * (this.maxcustom - this.minicustom + 1)) + this.minicustom
+            );
+        }
+        console.log(this.realcustom);
     }
 
 
-}
 
-Branches.prototype.sales = function () {
+   
 
-    for (let i = 0; i < 14; i++) {
+    Branches.prototype.sales = function () {
 
-        this.sales[i] = Math.floor(this.sales[i] * this.avrcustom);
+        for (let i = 0; i < workhours.length; i++) {
+
+            this.realsale[i] = Math.floor(this.realcustom[i] * this.avrcustom)
+
+        }
+        console.log(this.avrcustom);
+
+
     }
 
-    // sales.push(this.realsale);
+    Branches.prototype.totalsales = function () {
 
-}
+        // this.totalsales.reduce((a, b) => a + b, 0)
 
-
-
-Branches.prototype.totalsales = function () {
-
+        // this.totalsales.push(this.totalsales.reduce((a, b) => a + b, 0));
+    }
 
 
 
-    // this.totalsales.reduce((a, b) => a + b, 0)
-
-    // this.totalsales.push(this.totalsales.reduce((a, b) => a + b, 0));
-
-
-
-}
-
-
-
-
+};
 
 
 let seattle = new Branches('seattle', 65, 23, 6.3);
 seattle.customers()
 seattle.sales()
 seattle.totalsales()
+seattle.render
 console.log(seattle);
 
 
@@ -240,6 +243,10 @@ lima.totalsales()
 console.log(lima);
 
 
+
+
+
+
 let parent9 = document.getElementById('table of sales');
 let table = document.createElement('table');
 parent9.appendChild(table);
@@ -257,28 +264,19 @@ for (let i = 0; i < workhours.length; i++) {
 
 
 
-for (let i = 0; i < br.length; i++) {
+Branches.prototype.render=function(){
 
-    let raws = document.createElement('tr');
-    table.appendChild(raws);
-raws.textContent =br[i]
+let newraw =document.createElement('tr');
+table.appendChild(newraw);
+let brname =document.createElement('td');
+newraw.appendChild(brname);
 
-    for (let j = 0; j < workhours.length; j++) {
-        let otherraw = document.createElement('td');
-        raws.appendChild(otherraw);
-otherraw.textContent = realsale;
-    }
-    
+brname.textContent=this.location;
 
-
-}
-
-let downheading =document.createElement('tr');
-table.appendChild(downheading);
-for (let i = 0; i < workhours.length; i++) {
-let downel=document.createElement('th');
-downheading.appendChild(downel);
-downel.textContent = workhours[i]
+ for (let i = 0; i < workhours.length; i++) {
+let cookiesEelemnt=document.createElement('tr');
+newraw.appendChild(cookiesEelemnt);
+cookiesEelemnt.textContent=this.realsale[i];
 
 }
 
@@ -286,22 +284,7 @@ downel.textContent = workhours[i]
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
