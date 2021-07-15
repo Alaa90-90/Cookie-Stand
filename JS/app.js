@@ -183,7 +183,7 @@ function Branches(location, maxcustom, minicustom, avrcustom) {
 
 
 
-   
+
 
     Branches.prototype.sales = function () {
 
@@ -264,19 +264,25 @@ for (let i = 0; i < workhours.length; i++) {
 
 
 
-Branches.prototype.render=function(){
+Branches.prototype.render = function () {
 
-let newraw =document.createElement('tr');
-table.appendChild(newraw);
-let brname =document.createElement('td');
-newraw.appendChild(brname);
+    let newraw = document.createElement('tr');
+    table.appendChild(newraw);
+    let brname = document.createElement('td');
+    newraw.appendChild(brname);
 
-brname.textContent=this.location;
+    brname.textContent = this.location;
 
- for (let i = 0; i < workhours.length; i++) {
-let cookiesEelemnt=document.createElement('tr');
-newraw.appendChild(cookiesEelemnt);
-cookiesEelemnt.textContent=this.realsale[i];
+    for (let i = 0; i < workhours.length; i++) {
+        let cookiesEelemnt = document.createElement('tr');
+        newraw.appendChild(cookiesEelemnt);
+        cookiesEelemnt.textContent = this.realsale[i];
+
+    }
+
+
+
+
 
 }
 
@@ -284,9 +290,60 @@ cookiesEelemnt.textContent=this.realsale[i];
 
 
 
+
+
+
+
+
+
+
+let submet = document.getElementById('sbmt');
+addEventListener('click', submitsuggest);
+
+function submitsuggest() {
+
+
+    let restz = {
+        locationz: 'tokyo',
+        maxcusz: 24,
+        minicusz: 3,
+        avgpercusz: 1.2,
+        realcusz: [],
+        realsalesz: [],
+
+        real0cusz: function () {
+
+            for (let i = 0; i < workhours; i++) {
+
+                this.realcusz[i] = (Math.floor(Math.random() * (this.maxcusz - this.minicusz + 1)) + this.minicusz
+                );
+            }
+        },
+
+        real0salesz: function () {
+
+            for (let i = 0; i < workhours; i++) {
+
+                this.realsalesz[i] = Math.floor(this.realcusz[i] * this.avgpercusz)
+            };
+        },
+
+        // this function sponcerd by w3school.com
+
+        total0Salesz: function () {
+
+            this.realsalesz.reduce((a, b) => a + b, 0)
+
+            this.realsalesz.push(this.realsalesz.reduce((a, b) => a + b, 0));
+
+        }
+    };
+
+    restz.real0cusz();
+    restz.real0salesz();
+    restz.total0Salesz();
+
+    console.log(restz);
+
+
 }
-
-
-
-
-
