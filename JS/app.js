@@ -158,6 +158,251 @@ let br = ['seattle', 'tokyo', 'dubai', 'paris', 'lima'];
 
 
 
+// let rest2 = {
+//     location2: 'tokyo',
+//     maxcus2: 24,
+//     minicus2: 3,
+//     avgpercus2: 1.2,
+//     realcus2: [],
+//     realsales2: [],
+
+//     real0cus2: function () {
+
+//         for (let i = 0; i < 14; i++) {
+
+//             this.realcus2[i]=(Math.floor(Math.random() * (this.maxcus2 - this.minicus2 + 1)) + this.minicus2
+//             );
+//         }
+//     },
+
+//     real0sales2: function () {
+
+//         for (let i = 0; i < 14; i++) {
+
+//             this.realsales2[i]=Math.floor(this.realcus2[i]*this.avgpercus2)
+// };
+//     },
+
+//     // this function sponcerd by w3school.com
+
+// total0Sales2:function(){
+
+//        this.realsales2.reduce((a, b) => a + b, 0)
+
+//        this.realsales2.push(this.realsales2.reduce((a, b) => a + b, 0));
+
+// }
+// };
+
+// rest2.real0cus2();
+// rest2.real0sales2();
+// rest2.total0Sales2();
+
+//   console.log(rest2);
+
+//   let parent2= document.getElementById('tokyo Sales For Today');
+//   let BranchElement2=document.createElement('h2');
+
+//   BranchElement2.textContent=rest2.location2;
+
+//   parent2.appendChild(BranchElement2);
+
+
+
+//   let ulelement2=document.createElement('ul');
+//   parent2.appendChild(ulelement2);
+
+//   for (let i = 0; i < workhours.length; i++) {
+
+//     let workhoursElement2=document.createElement('li');
+//     workhoursElement2.textContent=`${workhours[i]}: ${rest2.realsales2[i]}`;
+//     ulelement2.appendChild(workhoursElement2);
+
+//   }
+
+// console.log(parent2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let rest2 = {
+//     location2: 'tokyo',
+//     maxcus2: 24,
+//     minicus2: 3,
+//     avgpercus2: 1.2,
+//     realcus2: [],
+//     realsales2: [],
+
+//     real0cus2: function () {
+
+//         for (let i = 0; i < 14; i++) {
+
+//             this.realcus2[i]=(Math.floor(Math.random() * (this.maxcus2 - this.minicus2 + 1)) + this.minicus2
+//             );
+//         }
+//     },
+
+//     real0sales2: function () {
+
+//         for (let i = 0; i < 14; i++) {
+
+//             this.realsales2[i]=Math.floor(this.realcus2[i]*this.avgpercus2)
+// };
+//     },
+
+//     // this function sponcerd by w3school.com
+
+// total0Sales2:function(){
+
+//        this.realsales2.reduce((a, b) => a + b, 0)
+
+//        this.realsales2.push(this.realsales2.reduce((a, b) => a + b, 0));
+
+// }
+// };
+
+// rest2.real0cus2();
+// rest2.real0sales2();
+// rest2.total0Sales2();
+
+//   console.log(rest2);
+
+//   let parent2= document.getElementById('tokyo Sales For Today');
+//   let BranchElement2=document.createElement('h2');
+
+//   BranchElement2.textContent=rest2.location2;
+
+//   parent2.appendChild(BranchElement2);
+
+
+
+//   let ulelement2=document.createElement('ul');
+//   parent2.appendChild(ulelement2);
+
+//   for (let i = 0; i < workhours.length; i++) {
+
+//     let workhoursElement2=document.createElement('li');
+//     workhoursElement2.textContent=`${workhours[i]}: ${rest2.realsales2[i]}`;
+//     ulelement2.appendChild(workhoursElement2);
+
+//   }
+
+// console.log(parent2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let rest2 = {
+//     location2: 'tokyo',
+//     maxcus2: 24,
+//     minicus2: 3,
+//     avgpercus2: 1.2,
+//     realcus2: [],
+//     realsales2: [],
+
+//     real0cus2: function () {
+
+//         for (let i = 0; i < 14; i++) {
+
+//             this.realcus2[i]=(Math.floor(Math.random() * (this.maxcus2 - this.minicus2 + 1)) + this.minicus2
+//             );
+//         }
+//     },
+
+//     real0sales2: function () {
+
+//         for (let i = 0; i < 14; i++) {
+
+//             this.realsales2[i]=Math.floor(this.realcus2[i]*this.avgpercus2)
+// };
+//     },
+
+//     // this function sponcerd by w3school.com
+
+// total0Sales2:function(){
+
+//        this.realsales2.reduce((a, b) => a + b, 0)
+
+//        this.realsales2.push(this.realsales2.reduce((a, b) => a + b, 0));
+
+// }
+// };
+
+// rest2.real0cus2();
+// rest2.real0sales2();
+// rest2.total0Sales2();
+
+//   console.log(rest2);
+
+//   let parent2= document.getElementById('tokyo Sales For Today');
+//   let BranchElement2=document.createElement('h2');
+
+//   BranchElement2.textContent=rest2.location2;
+
+//   parent2.appendChild(BranchElement2);
+
+
+
+//   let ulelement2=document.createElement('ul');
+//   parent2.appendChild(ulelement2);
+
+//   for (let i = 0; i < workhours.length; i++) {
+
+//     let workhoursElement2=document.createElement('li');
+//     workhoursElement2.textContent=`${workhours[i]}: ${rest2.realsales2[i]}`;
+//     ulelement2.appendChild(workhoursElement2);
+
+//   }
+
+// console.log(parent2);
+
+
+
+
+
+
+
+
+
+
+
 
 function Branches(location, maxcustom, minicustom, avrcustom) {
 
