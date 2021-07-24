@@ -1,39 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-<link rel="reset" href="CSS/reset.css">
+    <link rel="reset" href="CSS/reset.css">
 
     <link rel="stylesheet" href="CSS/stylesheet.css">
-    
+
 </head>
+
 <body>
-<head>
-<h2>  <a href="index.html">&#127968; Home Page</a></h2>
-    <h1>
-      salmon cookies restaurents group
-    </h1>
-</head>
-<main>
-   <div id="Table">   </div>
 
-    
+    <head>
+        <h2> <a href="index.html">&#127968; Home Page</a></h2>
+        <h1>
+            Salmon Cookies Restaurents Group
+        </h1>
+    </head>
+    <main>
 
-    <div id="table of sales">
+        <header>
+
+            <div id="Table"> </div>
 
 
-    </div>
-</main>
 
-    
+            <div id="table of sales">
 
-    <script src="JS/app.js">
+        </header>
 
-        
-    </script>
+    </main>
+
+    <form id="userinput">
+        <fieldset>
+
+            <label for="adding location">Please Add The location You Suggest :</label>
+            <input type="text" name="userlocation" id="adding location">
+            <br>
+            <br>
+
+            <label for="adding max">Please Add The Maximum Number Of Customers You Suggest :</label>
+            <input type="number" name="usermaxcustom" id="adding max">
+            <br>
+            <br>
+            <label for="adding mini">Please Add The Minimum Number Of Customers You Suggest :</label>
+            <input type="number" name="userminicustom" id="adding min">
+            <br>
+            <br>
+            <label for="adding avarage">Please Add The Average Of Cookies / Person :</label>
+            <input type="float" name="useravrcustom" id="adding avarage">
+            <br>
+            <br>
+
+            <input type="submit" value="submit your suggest!">
+
+        </fieldset>
+
+
+
+    </form>
+    <footer>
+        <script src="JS/app.js">
+        </script>
+    </footer>
+
+
 </body>
+
 </html>

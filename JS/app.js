@@ -299,6 +299,7 @@ let rest5 = {
         this.totalDaysales5 = this.realsales5.reduce((a, b) => a + b, 0)
     },
 
+    
     render5: function () {
 
         let parent = document.getElementById('table of sales');
@@ -486,83 +487,33 @@ downheadingfinalt.textContent = (grossSum);
 
 
 
+let userform=document.getElementById('userinput');
+userform.addEventListener('submit',useradding);
+
+function useradding(event){
+event.preventDefult();
+
+let userlocation=event.target.userlocation.value;
+console.log(userlocation);
+
+let usermaxcustom=parseInt(event.target.usermaxcustom.value);
+console.log(usermaxcustom);
+
+let userminicustom=parseInt(event.target.userminicustom.value);
+console.log(userminicustom);
+
+let useravrcustom=parseFloat(event.target.useravrcustom.value);
+
+console.log(useravrcustom);
+
+
+let userRest=new Branches(userlocation,usermaxcustom,userminicustom,useravrcustom);
+userRest.customers();
+userRest.sales();
+userRest.totalsales();
+
+
+}
 
 
 
-// let headingFirst = document.createElement('th');
-// heading.appendChild(headingFirst);
-// headingFirst.textContent = 'Alaa  ';
-
-// let headingraw = document.createElement('tr');
-// table.appendChild(headingraw);
-
-
-// Branches.prototype.render = function () {
-
-//     let newraw = document.createElement('tr');
-//     table.appendChild(newraw);
-//     let brname = document.createElement('td');
-//     newraw.appendChild(brname);
-
-//     brname.textContent = this.location;
-
-//     for (let i = 0; i < workhours.length; i++) {
-//         let cookiesEelemnt = document.createElement('tr');
-//         newraw.appendChild(cookiesEelemnt);
-//         cookiesEelemnt.textContent = this.realsale[i];
-//     }
-
-// }
-
-
-
-// let submet = document.getElementById('sbmt');
-// addEventListener('click', submitsuggest);
-
-// function submitsuggest() {
-
-
-//     let restz = {
-//         locationz: 'tokyo',
-//         maxcusz: 24,
-//         minicusz: 3,
-//         avgpercusz: 1.2,
-//         realcusz: [],
-//         realsalesz: [],
-
-//         real0cusz: function () {
-
-//             for (let i = 0; i < workhours; i++) {
-
-//                 this.realcusz[i] = (Math.floor(Math.random() * (this.maxcusz - this.minicusz + 1)) + this.minicusz
-//                 );
-//             }
-//         },
-
-//         real0salesz: function () {
-
-//             for (let i = 0; i < workhours; i++) {
-
-//                 this.realsalesz[i] = Math.floor(this.realcusz[i] * this.avgpercusz)
-//             };
-//         },
-
-//         // this function sponcerd by w3school.com
-
-//         total0Salesz: function () {
-
-//             this.realsalesz.reduce((a, b) => a + b, 0)
-
-//             this.realsalesz.push(this.realsalesz.reduce((a, b) => a + b, 0));
-
-//         }
-//     };
-
-//     restz.real0cusz();
-//     restz.real0salesz();
-//     restz.total0Salesz();
-
-//     console.log(restz);
-
-
-// }
