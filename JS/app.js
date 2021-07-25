@@ -491,7 +491,7 @@ let userform=document.getElementById('userinput');
 userform.addEventListener('submit',useradding);
 
 function useradding(event){
-event.preventDefult();
+event.preventDefault();
 
 let userlocation=event.target.userlocation.value;
 console.log(userlocation);
